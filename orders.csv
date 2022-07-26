@@ -1,0 +1,11 @@
+HTTP Request,View all orders,View all orders based on specific date,View all orders placed by a specific customer,Accept Order details,Modify Order,Cancel Order
+URL,,,,,,
+METHOD,,,,,,
+"Request Body 		",,,,,,
+"Content Type	",,,,,,
+Body ,,,,,,
+,,,,,,
+HTTP Response,,,,,,
+Status Code,,,,,,
+Status Message,,,,,,
+Body,,,,,,

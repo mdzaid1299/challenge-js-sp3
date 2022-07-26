@@ -1,0 +1,11 @@
+HTTP Request,For all menu items,Fetch menu items by category (starters / beverages / main course),Fetch menu items by cuisine (Chinese / Asian / French / Mexican),Fetch menu item by id,Add menu item,Update menu item,Delete menu items
+URL,,,,,,,
+METHOD,,,,,,,
+"Request Body 		",,,,,,,
+"Content Type	",,,,,,,
+Body ,,,,,,,
+,,,,,,,
+HTTP Response,,,,,,,
+Status Code,,,,,,,
+Status Message,,,,,,,
+Body,,,,,,,

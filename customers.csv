@@ -1,0 +1,11 @@
+HTTP Request,Fetch all customer details,Fetch Customer by ID,Fetch Customer by Name,Fetch Customer by Email,Add new customer,Update customer details
+URL,,,,,,
+METHOD,,,,,,
+"Request Body 		",,,,,,
+"Content Type	",,,,,,
+Body ,,,,,,
+,,,,,,
+HTTP Response,,,,,,
+Status Code,,,,,,
+Status Message,,,,,,
+Body,,,,,,
