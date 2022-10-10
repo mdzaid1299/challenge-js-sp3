@@ -1,5 +1,432 @@
 {
     "paths": {
+        "/menu": {
+             "get":{
+                 "summary": "View all menu details",
+                     
+                    "responses": {
+                         "200": {
+                         "description": "successful operation",
+                         "content-type": "application/json",
+                             "type": "array",
+                             "items":{
+                             "menuId": "integer",
+                             "itemName": "string",
+                             "category": "string",
+                             "cuisine": "string",
+                             "price": "floating-point"
+                            }
+                        },
+                        "404": {
+                         "description": "resource not found",
+                         "content": {}
+                        }
+                 }
+                },
         
+                "post":{
+                        "summary": "Add menu details",
+                        
+                        "responses": {
+                            "200": {
+                                "description": "successful operation",
+                                "content-type": "application/json",
+                                "type": "array",
+                                "items":{
+                                    "menuId": "integer",
+                                    "itemName": "string",
+                                    "category": "string",
+                                    "cuisine": "string",
+                                    "price": "floating-point"
+                                }
+                            },
+                            "404": {
+                                "description": "resource not found",
+                                "content": {}
+        
+                            }
+                        }
+                    }
+                }
+            },
+            "/menu/{id}": {
+                "parameter": {
+                    "id": {
+                        "type": "integer",
+                        "required": true
+                    }
+                },
+                "get":{
+                    "summary": "Get details of menu by id",
+                    
+                    "responses": {
+                        "200": {
+                            "description": "successful operation",
+                            "content-type": "application/json",
+                            "type": "array",
+                            "items":{
+                                "menuId": "integer",
+                                "itemName": "string",
+                                "category": "string",
+                                "cuisine": "string",
+                                "price": "floating-point"
+                            }
+                        },
+                        "404": {
+                            "description": "resource not found",
+                            "content": {}
+    
+                        }
+                    }
+                },
+                "put":{
+                    "summary": "update  menu by id",
+                    
+                    "responses": {
+                        "200": {
+                            "description": "successful operation",
+                            "content-type": "application/json",
+                            "type": "array",
+                            "items":{
+                                "menuId": "integer",
+                                "itemName": "string",
+                                "category": "string",
+                                "cuisine": "string",
+                                "price": "floating-point"
+                            }
+                        },
+                        "404": {
+                            "description": "resource not found",
+                            "content": {}
+    
+                        }
+                    }
+                }
+            },
+            "/customer": {
+                "get":{
+                    "summary": "View all customer details",
+                        
+                       "responses": {
+                            "200": {
+                            "description": "successful operation",
+                            "content-type": "application/json",
+                                "type": "array",
+                                "items":{
+                                    "id": "integer",
+                                    "name": "String",
+                                    "email": "String",
+                                    "phoneNumber": "integer",
+                                    "address": {
+                                      "streetName": "String",
+                                      "streetNo":"integer",
+                                      "postalCode": "integer"
+                               }
+                           },
+                           "404": {
+                            "description": "resource not found",
+                            "content": {}
+                           }
+                    }
+                   },
+           
+                   "post":{
+                           "summary": "Add customer details",
+                           
+                           "responses": {
+                               "200": {
+                                   "description": "successful operation",
+                                   "content-type": "application/json",
+                                   "type": "array",
+                                   "items":{
+                                    "id": "integer",
+                                    "name": "String",
+                                    "email": "String",
+                                    "phoneNumber": "integer",
+                                    "address": {
+                                      "streetName": "String",
+                                      "streetNo":"integer",
+                                      "postalCode": "integer"
+                                   }
+                               },
+                               "404": {
+                                   "description": "resource not found",
+                                   "content": {}
+           
+                               }
+                           }
+                       }
+                   }
+               },
+               "/customer/{id}": {
+                   "parameter": {
+                       "id": {
+                           "type": "integer",
+                           "required": true
+                       }
+                   },
+                   "get":{
+                       "summary": "Get details of customer by id",
+                       
+                       "responses": {
+                           "200": {
+                               "description": "successful operation",
+                               "content-type": "application/json",
+                               "type": "array",
+                               "items":{
+                                "id": "integer",
+                                "name": "String",
+                                "email": "String",
+                                "phoneNumber": "integer",
+                                "address": {
+                                  "streetName": "String",
+                                  "streetNo":"integer",
+                                  "postalCode": "integer"
+                               }
+                           },
+                           "404": {
+                               "description": "resource not found",
+                               "content": {}
+       
+                           }
+                       }
+                   },
+                   "put":{
+                       "summary": "update  customer by id",
+                       
+                       "responses": {
+                           "200": {
+                               "description": "successful operation",
+                               "content-type": "application/json",
+                               "type": "array",
+                               "items":{
+                                "id": "integer",
+                                "name": "String",
+                                "email": "String",
+                                "phoneNumber": "integer",
+                                "address": {
+                                  "streetName": "String",
+                                  "streetNo":"integer",
+                                  "postalCode": "integer"
+                               }
+                           },
+                           "404": {
+                               "description": "resource not found",
+                               "content": {}
+       
+                           }
+                       }
+                   }
+               }
+
+        }
+    }
+},
+"/customer/{name}": {
+    "parameter": {
+        "id": {
+            "type": "integer",
+            "required": true
+        }
+    },
+    "get":{
+        "summary": "Get details of customer by name",
+        
+        "responses": {
+            "200": {
+                "description": "successful operation",
+                "content-type": "application/json",
+                "type": "array",
+                "items":{
+                 "id": "integer",
+                 "name": "String",
+                 "email": "String",
+                 "phoneNumber": "integer",
+                 "address": {
+                   "streetName": "String",
+                   "streetNo":"integer",
+                   "postalCode": "integer"
+                }
+            },
+            "404": {
+                "description": "resource not found",
+                "content": {}
+
+            }
+        }
     }
 }
+},
+"/orders": {
+    "get":{
+        "summary": "Accept order details",
+            
+           "responses": {
+                "200": {
+                "description": "successful operation",
+                "content-type": "application/json",
+                    "type": "array",
+                    "items":{
+                        "id": "integer",
+                        "orderDate": "string",
+                        "items": [
+                          {
+                            "itemName": "string",
+                            "price":"floating-point"
+                          },
+                          {
+                            "itemName": "string",
+                            "price": "floating-point"
+                          }
+                        ],
+                        "customer": {
+                          "name": "string",
+                          "email": "string",
+                          "phoneNumber": "integer",
+                          "address": {
+                            "streetName": "string",
+                            "streetNo": "integer",
+                            "postalCode": "integer"
+                          }
+                        }
+                      }
+                   }
+               },
+               "404": {
+                "description": "resource not found",
+                "content": {}
+               }
+        }
+       },
+
+      
+    "/orders/{id}": {
+       "parameter": {
+           "id": {
+               "type": "integer",
+               "required": true
+           }
+       },
+       "get":{
+        "summary": "get order details by id",
+            
+           "responses": {
+                "200": {
+                "description": "successful operation",
+                "content-type": "application/json",
+                    "type": "array",
+                    "items":{
+                        "id": "integer",
+                        "orderDate": "string",
+                        "items": [
+                          {
+                            "itemName": "string",
+                            "price":"floating-point"
+                          },
+                          {
+                            "itemName": "string",
+                            "price": "floating-point"
+                          }
+                        ],
+                        "customer": {
+                          "name": "string",
+                          "email": "string",
+                          "phoneNumber": "integer",
+                          "address": {
+                            "streetName": "string",
+                            "streetNo": "integer",
+                            "postalCode": "integer"
+                          }
+                        }
+                      }
+                   }
+               },
+       "put":{
+           "summary": "update  order by id",
+           
+           "responses": {
+               "200": {
+                   "description": "successful operation",
+                   "content-type": "application/json",
+                   "type": "array",
+                   "items":{
+                    "id": "integer",
+                    "orderDate": "string",
+                    "items": [
+                      {
+                        "itemName": "string",
+                        "price":"floating-point"
+                      },
+                      {
+                        "itemName": "string",
+                        "price": "floating-point"
+                      }
+                    ],
+                    "customer": {
+                      "name": "string",
+                      "email": "string",
+                      "phoneNumber": "integer",
+                      "address": {
+                        "streetName": "string",
+                        "streetNo": "integer",
+                        "postalCode": "integer"
+                      }
+                    }
+                   }
+               },
+               "404": {
+                   "description": "resource not found",
+                   "content": {}
+
+               }
+           }
+       }
+   }
+},
+"/orders/{date}": {
+    "parameter": {
+        "id": {
+            "type": "integer",
+            "required": true
+        }
+    },
+    "get":{
+     "summary": "get order details by date",
+         
+        "responses": {
+             "200": {
+             "description": "successful operation",
+             "content-type": "application/json",
+                 "type": "array",
+                 "items":{
+                     "id": "integer",
+                     "orderDate": "string",
+                     "items": [
+                       {
+                         "itemName": "string",
+                         "price":"floating-point"
+                       },
+                       {
+                         "itemName": "string",
+                         "price": "floating-point"
+                       }
+                     ],
+                     "customer": {
+                       "name": "string",
+                       "email": "string",
+                       "phoneNumber": "integer",
+                       "address": {
+                         "streetName": "string",
+                         "streetNo": "integer",
+                         "postalCode": "integer"
+                       }
+                     }
+                   }
+                }
+            }
+}
+}
+}
+    
+    
+    

@@ -1,11 +1,96 @@
 HTTP Request,View all orders,View all orders based on specific date,View all orders placed by a specific customer,Accept Order details,Modify Order,Cancel Order
-URL,,,,,,
-METHOD,,,,,,
-"Request Body 		",,,,,,
-"Content Type	",,,,,,
+URL,http://localhost:3000/orders,http://localhost:3000/orders,http://localhost:3000/orders,http://localhost:3000/orders,http://localhost:3000/orders,http://localhost:3000/orders
+METHOD,GET,GET,GET,POST,PUT,DELETE
+"Request Body 		",,,," {
+        ""id"": 700,
+        ""orderDate"": ""06-25-2022"",
+        ""items"": [
+            {
+                ""itemName"": ""Pizza"",
+                ""price"": 680
+            }
+        ],
+        ""customer"": {
+            ""name"": ""Swapnil"",
+            ""email"": ""swapnil@yahoo.com"",
+            ""phoneNumber"": ""+1125432178"",
+            ""address"": {
+                ""streetName"": ""Beachwalk"",
+                ""streetNo"": ""902"",
+                ""postalCode"": ""96815""
+            }
+        }
+    }"," {
+        ""id"": 700,
+        ""orderDate"": ""06-25-2022"",
+        ""items"": [
+            {
+                ""itemName"": ""Burger"",
+                ""price"": 280
+            }
+        ],
+        ""customer"": {
+            ""name"": ""Swapnil"",
+            ""email"": ""swapnil@yahoo.com"",
+            ""phoneNumber"": ""+1125432178"",
+            ""address"": {
+                ""streetName"": ""Beachwalk"",
+                ""streetNo"": ""902"",
+                ""postalCode"": ""96815""
+            }
+        }
+    }",
+"Content Type	",application/json,application/json,application/json,application/json,application/json,application/json
 Body ,,,,,,
 ,,,,,,
-HTTP Response,,,,,,
-Status Code,,,,,,
-Status Message,,,,,,
-Body,,,,,,
+HTTP Response,GET http://localhost:3000/orders,GET http://localhost:3000/orders/?orderDate=06-25-2022,GET http://localhost:3000/orders?id=601&name=Mary,POST http://localhost:3000/orders,PUT http://localhost:3000/orders/700,DELETE http://localhost:3000/orders/700
+Status Code,200 ok,200 ok,200 ok,201 created,200 ok,200 ok
+Status Message,"Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action.","Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action.","Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action.",The request has been fulfilled and resulted in a new resource being created.,"Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action.","Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action.
+"
+Body,,"[
+    {
+        ""id"": 603,
+        ""orderDate"": ""06-25-2022"",
+        ""items"": [
+            {
+                ""itemName"": ""Mexican Delight Pizza"",
+                ""price"": 68
+            }
+        ],
+        ""customer"": {
+            ""name"": ""Jennifer"",
+            ""email"": ""Jennifer@yahoo.com"",
+            ""phoneNumber"": ""+11525432178"",
+            ""address"": {
+                ""streetName"": ""Beachwalk"",
+                ""streetNo"": ""902"",
+                ""postalCode"": ""96815""
+            }
+        }
+    }
+]","[
+    {
+        ""id"": 601,
+        ""orderDate"": ""06-22-2022"",
+        ""items"": [
+            {
+                ""itemName"": ""Berry Blast"",
+                ""price"": 1.72
+            },
+            {
+                ""itemName"": ""Emilgrana & Mushroom Dip"",
+                ""price"": 41.4
+            }
+        ],
+        ""customer"": {
+            ""name"": ""Mary"",
+            ""email"": ""mary@gmail.com"",
+            ""phoneNumber"": ""+11524449876"",
+            ""address"": {
+                ""streetName"": ""Scottsdale Kierland"",
+                ""streetNo"": ""100"",
+                ""postalCode"": ""85254""
+            }
+        }
+    }
+]",,,

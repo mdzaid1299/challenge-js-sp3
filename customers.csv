@@ -1,11 +1,71 @@
 HTTP Request,Fetch all customer details,Fetch Customer by ID,Fetch Customer by Name,Fetch Customer by Email,Add new customer,Update customer details
-URL,,,,,,
-METHOD,,,,,,
+URL ,  http://localhost:3000/customers, http://localhost:3000/customers, http://localhost:3000/customers, http://localhost:3000/customers, http://localhost:3000/customers, http://localhost:3000/customers
+METHOD ,GET ,GET,GET,GET,POST,PUT
 "Request Body 		",,,,,,
-"Content Type	",,,,,,
-Body ,,,,,,
+"Content Type	",application/json,application/json,application/json,application/json,application/json,application/json
+Body ,,,,,"{
+    ""id"": 101,
+    ""name"": ""Jenny"",
+    ""email"": ""jenny@gmail.com"",
+    ""phoneNumber"": ""+1152446876"",
+    ""address"": {
+        ""streetName"": ""Scottsdale Kierland"",
+        ""streetNo"": ""100"",
+        ""postalCode"": ""85254""
+    }
+}","{
+    ""id"": 101,
+    ""name"": ""Rohan"",
+    ""email"": ""rl@gmail.com"",
+    ""phoneNumber"": ""+1152446876"",
+    ""address"": {
+        ""streetName"": ""Scottsdale Kierland"",
+        ""streetNo"": ""100"",
+        ""postalCode"": ""85254""
+    }
+}"
 ,,,,,,
-HTTP Response,,,,,,
-Status Code,,,,,,
-Status Message,,,,,,
-Body,,,,,,
+HTTP Response,GET http://localhost:3000/customers,GET http://localhost:3000/customers/2,GET http://localhost:3000/customers/?name=Mary,GET http://localhost:3000/customers/?email=Jennifer@yahoo.com,POST http://localhost:3000/customers,PUT http://localhost:3000/customers/101
+Status Code,200 ok,200 ok,200 ok,200 ok,201 created,200 ok
+Status Message,"Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action.","Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action.","Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action.","Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action.",The request has been fulfilled and resulted in a new resource being created.,"Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+Body,,"   { ""id"": 2,
+    ""name"": ""Mary"",
+    ""email"": ""mary@gmail.com"",
+    ""phoneNumber"": ""+11524449876"",
+    ""address"": {
+        ""streetName"": ""Scottsdale Kierland"",
+        ""streetNo"": ""100"",
+        ""postalCode"": ""85254""
+    }
+}","    ""id"": 2,
+    ""name"": ""Mary"",
+    ""email"": ""mary@gmail.com"",
+    ""phoneNumber"": ""+11524449876"",
+    ""address"": {
+        ""streetName"": ""Scottsdale Kierland"",
+        ""streetNo"": ""100"",
+        ""postalCode"": ""85254""
+    }
+}","    {
+        ""id"": 3,
+        ""name"": ""Jennifer"",
+        ""email"": ""Jennifer@yahoo.com"",
+        ""phoneNumber"": ""+11525432178"",
+        ""address"": {
+            ""streetName"": ""Beachwalk"",
+            ""streetNo"": ""902"",
+            ""postalCode"": ""96815""
+        }
+    }",,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,],,

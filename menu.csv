@@ -1,11 +1,89 @@
 HTTP Request,For all menu items,Fetch menu items by category (starters / beverages / main course),Fetch menu items by cuisine (Chinese / Asian / French / Mexican),Fetch menu item by id,Add menu item,Update menu item,Delete menu items
-URL,,,,,,,
-METHOD,,,,,,,
-"Request Body 		",,,,,,,
-"Content Type	",,,,,,,
+URL,  http://localhost:3000/menu,  http://localhost:3000/menu,  http://localhost:3000/menu,  http://localhost:3000/menu,  http://localhost:3000/menu,  http://localhost:3000/menu,  http://localhost:3000/menu
+METHOD,Get,GET,GET,GET,POST,PUT,Delete
+"Request Body 		",,,,,"{
+    ""id"": 120,
+    ""category"": ""Starters"",
+    ""itemName"": ""Peri Peri"",
+    ""price"": 200,
+    ""cuisine"": ""Chinese""
+}","{
+    ""id"": 120,
+    ""category"": ""Main"",
+    ""itemName"": ""Paneer tikki"",
+    ""price"": 200,
+    ""cuisine"": ""Chinese""
+}",
+"Content Type	",application/json,application/json,application/json,application/json,application/json,application/json,application/json
 Body ,,,,,,,
 ,,,,,,,
-HTTP Response,,,,,,,
-Status Code,,,,,,,
-Status Message,,,,,,,
-Body,,,,,,,
+HTTP Response,GET http://localhost:3000/menu,GET http://localhost:3000/menu/?category=Beverages,GET http://localhost:3000/menu/?cuisine=French,GET http://localhost:3000/menu/102,POST http://localhost:3000/menu,PUT http://localhost:3000/menu/120,DELETE http://localhost:3000/menu/120
+Status Code,200 ok,200 ok,200 ok,200 ok,201 created,200 ok,200 ok
+Status Message,"Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action.","Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action.","Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action.","Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action.",The request has been fulfilled and resulted in a new resource being created.,"Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action.","Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+Body,,"[
+    {
+        ""id"": 201,
+        ""category"": ""Beverages"",
+        ""itemName"": ""Berry Blast"",
+        ""price"": 1.72
+    },
+    {
+        ""id"": 202,
+        ""category"": ""Beverages"",
+        ""itemName"": ""Oreo Monster Shake"",
+        ""price"": 3.78
+    },
+    {
+        ""id"": 203,
+        ""category"": ""Beverages"",
+        ""itemName"": ""Classic Mojito"",
+        ""price"": 3.44
+    },
+    {
+        ""id"": 204,
+        ""category"": ""Beverages"",
+        ""itemName"": ""Water Melon Ice Tea"",
+        ""price"": 2.5
+    },
+    {
+        ""id"": 205,
+        ""category"": ""Beverages"",
+        ""itemName"": ""Diet Pepsi"",
+        ""price"": 1
+    }
+]","[
+    {
+        ""id"": 104,
+        ""category"": ""Starters"",
+        ""itemName"": ""Veg Wrap"",
+        ""price"": 35,
+        ""cuisine"": ""French""
+    },
+    {
+        ""id"": 105,
+        ""category"": ""Starters"",
+        ""itemName"": ""Spinach and Artichoke Tortilla Crisp"",
+        ""price"": 58,
+        ""cuisine"": ""French""
+    },
+    {
+        ""id"": 301,
+        ""category"": ""Main Course"",
+        ""itemName"": ""Fruit Pizza"",
+        ""price"": 60,
+        ""cuisine"": ""French""
+    },
+    {
+        ""id"": 302,
+        ""category"": ""Main Course"",
+        ""itemName"": "" Combo of 2 Veg Pizzas"",
+        ""price"": 80,
+        ""cuisine"": ""French""
+    }
+]","{
+    ""id"": 102,
+    ""category"": ""Starters"",
+    ""itemName"": ""Mix Salad Bowl"",
+    ""price"": 20,
+    ""cuisine"": ""Asian""
+}",,,
